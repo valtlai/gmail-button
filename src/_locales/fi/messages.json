@@ -1,0 +1,6 @@
+{
+	"name": { "message": "Gmail-painike" },
+	"desc": { "message": "Yksinkertainen kuvake Gmailin avaamiseen" },
+	"open": { "message": "Avaa Gmail" },
+	"one" : { "message": "Vain yksi välilehti" }
+}

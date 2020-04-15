@@ -1,0 +1,22 @@
+==EN==
+
+Privacy: To use the “Single tab only” option, the user must grant the permission
+for the extension to use their browsing history. The permission is needed for
+checking if the current window already contains open Gmail tabs, so that
+the extension can open a new tab only if needed. The permission is never used
+for any other purpose. The extension can be used without the permission, but
+then the option won’t work.
+
+(This extension is not affiliated with Google. “Gmail” is a trademark of
+Google LLC.)
+
+==FI==
+
+Yksityisyys: Käyttääkseen ”Vain yksi välilehti” -valintaa käyttäjän tulee antaa
+laajennukselle käyttöoikeus hänen selaushistoriaansa. Tätä oikeutta tarvitaan
+sen tarkistamiseen, onko nykyisessä ikkunassa avoimia Gmail-välilehtiä, jotta
+laajennus voi avata uuden välilehden vain tarvittaessa. Käyttöoikeutta
+ei koskaan käytetä muihin tarkoituksiin. Laajennusta voi käyttää myös ilman
+tätä käyttöoikeutta, mutta tällöin edellä mainittu valinta ei toimi.
+
+(Tämä laajennus ei ole Googlen tekemä. ”Gmail” on Google LLC:n tavaramerkki.)

@@ -1,0 +1,6 @@
+{
+	"name": { "message": "Gmail Button" },
+	"desc": { "message": "A simple toolbar icon to open Gmail" },
+	"open": { "message": "Open Gmail" },
+	"one" : { "message": "Single @Tab @Only" }
+}
