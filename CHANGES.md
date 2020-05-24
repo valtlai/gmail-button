@@ -1,6 +1,4 @@
-# Changes
-
-(Dates use UTC.)
+# Changelog
 
 ## 2.0.0 (2019-06-23)
 * Made the `tabs` permission (labeled as *browsing history*) optional
