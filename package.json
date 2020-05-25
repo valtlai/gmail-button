@@ -3,7 +3,7 @@
 		"test": "eslint ."
 	},
 	"devDependencies": {
-		"@valtlai/eslint-config": "^0.1.1",
+		"@valtlai/eslint-config": "^0.2.0",
 		"eslint": "^7.1.0"
 	},
 	"eslintConfig": {
