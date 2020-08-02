@@ -7,8 +7,9 @@
 		"test": "eslint ."
 	},
 	"devDependencies": {
-		"@valtlai/eslint-config": "^0.4.0",
-		"eslint": "^7.5.0"
+		"@valtlai/eslint-config": "~0.6.0",
+		"eslint": "~7.6.0",
+		"eslint-plugin-unicorn": "~21.0.0"
 	},
 	"eslintConfig": {
 		"extends": "@valtlai",
