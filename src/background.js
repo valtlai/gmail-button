@@ -17,7 +17,7 @@ chrome.browserAction.onClicked.addListener(() => {
 		chrome.tabs.query({
 			url: '*://mail.google.com/*',
 			currentWindow: true
-		}, tabs => {
+		}, (tabs) => {
 			if (tabs[0]) chrome.tabs.update(tabs[0].id, { active: true });
 			else open();
 		});

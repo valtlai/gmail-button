@@ -7,14 +7,13 @@
 		"test": "eslint ."
 	},
 	"devDependencies": {
-		"@valtlai/eslint-config": "~0.6.0",
-		"eslint": "~7.6.0",
-		"eslint-plugin-unicorn": "~21.0.0"
+		"@valtlai/eslint-config": "~0.17.0",
+		"eslint": "~7.9.0",
+		"eslint-plugin-unicorn": "~22.0.0"
 	},
 	"eslintConfig": {
 		"extends": "@valtlai",
 		"env": {
-			"es6": true,
 			"webextensions": true
 		}
 	}
