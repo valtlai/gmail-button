@@ -28,7 +28,7 @@ chrome.browserAction.onClicked.addListener(() => {
 
 chrome.runtime.onInstalled.addListener(() => {
 	chrome.runtime.getPlatformInfo(({ os }) => {
-		const menuTitle = chrome.i18n.getMessage('one').replace(/@(\w)/g,
+		const menuTitle = chrome.i18n.getMessage('one').replace(/@(\w)/gu,
 			(_, p) => os === 'mac' ? p.toUpperCase() : p.toLowerCase());
 
 		chrome.contextMenus.create({
