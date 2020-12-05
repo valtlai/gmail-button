@@ -8,8 +8,8 @@
 		"install": "husky install && husky add pre-commit 'npm test'"
 	},
 	"devDependencies": {
-		"@valtlai/eslint-config": "~0.26.0",
-		"eslint": "~7.13.0",
+		"@valtlai/eslint-config": "~0.28.0",
+		"eslint": "~7.15.0",
 		"eslint-plugin-unicorn": "~23.0.0",
 		"husky": "^5.0.4"
 	},
