@@ -4,18 +4,14 @@
 	"license": "MIT",
 	"repository": "https://github.com/valtlai/gmail-button",
 	"scripts": {
-		"test": "eslint ."
+		"test": "eslint .",
+		"install": "husky install && husky add pre-commit 'npm test'"
 	},
 	"devDependencies": {
 		"@valtlai/eslint-config": "~0.26.0",
 		"eslint": "~7.13.0",
 		"eslint-plugin-unicorn": "~23.0.0",
-		"husky": "^4.3.0"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm test"
-		}
+		"husky": "^5.0.4"
 	},
 	"eslintConfig": {
 		"extends": "@valtlai",
