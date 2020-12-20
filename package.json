@@ -5,7 +5,7 @@
 	"repository": "https://github.com/valtlai/gmail-button",
 	"scripts": {
 		"test": "eslint .",
-		"install": "husky install && husky add pre-commit 'npm test'"
+		"install": "husky install"
 	},
 	"devDependencies": {
 		"@valtlai/eslint-config": "~0.28.0",
