@@ -5,7 +5,7 @@ const MENU_ID = 'one';
 
 /** Opening tab **/
 
-chrome.browserAction.onClicked.addListener(() => {
+chrome.action.onClicked.addListener(() => {
 	chrome.storage.local.get([OPT_KEY], ({ one }) => {
 		const open = () => chrome.tabs.create({ url: 'https://mail.google.com/mail/' });
 
@@ -35,7 +35,7 @@ chrome.runtime.onInstalled.addListener(() => {
 			id: MENU_ID,
 			type: 'checkbox',
 			title: menuTitle,
-			contexts: ['browser_action']
+			contexts: ['action']
 		});
 	});
 });
