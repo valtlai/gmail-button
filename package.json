@@ -7,10 +7,10 @@
 		"test": "eslint ."
 	},
 	"devDependencies": {
-		"@valtlai/eslint-config": "~0.34.0",
-		"eslint": "~7.21.0",
-		"eslint-plugin-unicorn": "~28.0.2",
-		"simple-git-hooks": "^2.0.1"
+		"@valtlai/eslint-config": "~0.38.1",
+		"eslint": "~7.25.0",
+		"eslint-plugin-unicorn": "~31.0.0",
+		"simple-git-hooks": "^2.3.1"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npm test"
