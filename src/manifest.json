@@ -1,20 +1,29 @@
 {
-	"manifest_version": 2,
-	"minimum_chrome_version": "47",
-	"default_locale": "en",
-	"name": "__MSG_name__",
-	"version": "2.0.0",
-	"description": "__MSG_desc__",
-	"icons": { "128": "icon.png" },
-	"permissions": ["contextMenus", "storage"],
-	"optional_permissions": ["tabs"],
-	"content_security_policy": "default-src 'none'; script-src 'self'",
-	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
-	},
-	"browser_action": {
-		"default_icon": "icon.png",
-		"default_title": "__MSG_open__"
-	}
+  "manifest_version": 2,
+  "minimum_chrome_version": "47",
+  "name": "__MSG_name__",
+  "version": "2.0.0",
+  "description": "__MSG_desc__",
+  "default_locale": "en",
+  "content_security_policy": "default-src 'none'; script-src 'self'",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "optional_permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "__MSG_open__"
+  }
 }

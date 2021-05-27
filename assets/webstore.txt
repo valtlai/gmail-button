@@ -1,4 +1,4 @@
-==EN==
+== EN ==
 
 Privacy: To use the “Single tab only” option, the user must grant the permission
 for the extension to use their browsing history. The permission is needed for
@@ -10,7 +10,7 @@ then the option won’t work.
 (This extension is not affiliated with Google. “Gmail” is a trademark of
 Google LLC.)
 
-==FI==
+== FI ==
 
 Yksityisyys: Käyttääkseen ”Vain yksi välilehti” -valintaa käyttäjän tulee antaa
 laajennukselle käyttöoikeus hänen selaushistoriaansa. Tätä oikeutta tarvitaan
