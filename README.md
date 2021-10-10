@@ -4,7 +4,7 @@
 
 A simple Chrome extension adding a toolbar icon to open Gmail.
 
-Install it from the [Chrome Web Store](
+Install it from [Chrome Web Store](
 https://chrome.google.com/webstore/detail/gmail-button/afdienfgfeojjnmobgakodmkiebhfcap
 )!
 
