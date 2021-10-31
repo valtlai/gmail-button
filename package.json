@@ -29,6 +29,6 @@
 		"trailingComma": "all"
 	},
 	"simple-git-hooks": {
-		"pre-commit": "npm run test"
+		"pre-commit": "npm test"
 	}
 }
