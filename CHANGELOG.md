@@ -1,12 +1,12 @@
 # Changelog
 
 ## 2.0.0 (2019-06-23)
-- Made the `tabs` permission (labeled as *browsing history*) optional
-  - Replaced the *Allow multiple tabs* option with *Single tab only*,
+- Made the `tabs` permission (labeled as _browsing history_) optional
+  - Replaced the _Allow multiple tabs_ option with _Single tab only_,
     disabled by default
   - The permission will be requested after the option is checked
     and removed after it’s unchecked
-- Changed to use title case on Mac (*Single Tab Only*)
+- Changed to use title case on Mac (_Single Tab Only_)
 
 ## 1.2.1 (2019-04-15)
 - Avoided code duplication
