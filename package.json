@@ -19,8 +19,7 @@
 			"webextensions": true
 		},
 		"parserOptions": {
-			"ecmaVersion": "latest",
-			"sourceType": "module"
+			"ecmaVersion": "latest"
 		}
 	},
 	"prettier": {
