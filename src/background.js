@@ -1,5 +1,3 @@
-'use strict';
-
 const OPT_KEY = 'one';
 const MENU_ID = 'one';
 
