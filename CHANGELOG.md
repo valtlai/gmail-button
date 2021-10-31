@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.0 (unreleased)
+- BREAKING: Upgraded to manifest v3
+- BREAKING: Required Chrome 95 or greater
+
 ## 2.0.0 (2019-06-23)
 - Made the `tabs` permission (labeled as _browsing history_) optional
   - Replaced the _Allow multiple tabs_ option with _Single tab only_,
