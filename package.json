@@ -4,12 +4,15 @@
 	"author": "Valtteri Laitinen <dev@valtlai.fi>",
 	"repository": "valtlai/gmail-button",
 	"scripts": {
-		"test": "eslint .",
-		"format": "prettier --write ."
+		"test": "npm run lint && npm run format:check",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check ."
 	},
 	"devDependencies": {
 		"eslint": "^8.1.0",
-		"prettier": "^2.4.1"
+		"prettier": "^2.4.1",
+		"simple-git-hooks": "^2.7.0"
 	},
 	"eslintConfig": {
 		"root": true,
@@ -26,5 +29,8 @@
 		"singleQuote": true,
 		"quoteProps": "consistent",
 		"trailingComma": "all"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npm run test"
 	}
 }
