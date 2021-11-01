@@ -3,39 +3,35 @@ const MENU_ID = 'one';
 
 /** Opening tab **/
 
-chrome.action.onClicked.addListener(() => {
-	chrome.storage.local.get([OPT_KEY], ({ one }) => {
-		const open = () =>
-			chrome.tabs.create({ url: 'https://mail.google.com/mail/' });
+chrome.action.onClicked.addListener(async () => {
+	const { one } = await chrome.storage.local.get([OPT_KEY]);
 
-		if (!one) {
-			open();
-			return;
-		}
+	const open = () =>
+		chrome.tabs.create({ url: 'https://mail.google.com/mail/' });
 
-		chrome.tabs.query(
-			{
-				url: '*://mail.google.com/*',
-				currentWindow: true,
-			},
-			(tabs) => {
-				if (tabs[0]) chrome.tabs.update(tabs[0].id, { active: true });
-				else open();
-			},
-		);
+	if (!one) {
+		open();
+		return;
+	}
+
+	const tabs = await chrome.tabs.query({
+		url: '*://mail.google.com/*',
+		currentWindow: true,
 	});
+
+	if (tabs[0]) chrome.tabs.update(tabs[0].id, { active: true });
+	else open();
 });
 
 /** Initialization **/
 
 chrome.runtime.onInstalled.addListener(() => {
+	// TODO: Convert to a promise
 	chrome.runtime.getPlatformInfo(({ os }) => {
-		// TODO: Fix. `chrome.i18n.getMessage()` is unavailable.
+		// TODO: Fix: `chrome.i18n.getMessage()` is unavailable
 		const menuTitle = chrome.i18n
 			.getMessage('one')
-			.replace(/@(\w)/gu, (_, p) =>
-				os === 'mac' ? p.toUpperCase() : p.toLowerCase(),
-			);
+			.replace(/@(\w)/g, (_, msg) => (os === 'mac' ? msg : msg.toLowerCase()));
 
 		chrome.contextMenus.create({
 			id: MENU_ID,
@@ -48,7 +44,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 /** Option & permission **/
 
-chrome.contextMenus.onClicked.addListener(({ checked }) => {
+chrome.contextMenus.onClicked.addListener(async ({ checked }) => {
 	const permission = { permissions: ['tabs'] };
 	const saveOption = (on) => chrome.storage.local.set({ [OPT_KEY]: on });
 
@@ -60,8 +56,9 @@ chrome.contextMenus.onClicked.addListener(({ checked }) => {
 
 	chrome.contextMenus.update(MENU_ID, { checked: false, enabled: false });
 
-	chrome.permissions.request(permission, (granted) => {
-		chrome.contextMenus.update(MENU_ID, { checked: granted, enabled: true });
-		saveOption(granted);
-	});
+	// TODO: update `minimum_chrome_version` and the changelog
+	// when this starts working in stable Chrome
+	const granted = await chrome.permissions.request(permission);
+	chrome.contextMenus.update(MENU_ID, { checked: granted, enabled: true });
+	saveOption(granted);
 });

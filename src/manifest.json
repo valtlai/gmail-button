@@ -1,6 +1,6 @@
 {
 	"manifest_version": 3,
-	"minimum_chrome_version": "95",
+	"minimum_chrome_version": "??",
 	"name": "__MSG_name__",
 	"version": "3.0.0",
 	"description": "__MSG_desc__",
