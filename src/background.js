@@ -14,12 +14,12 @@ chrome.action.onClicked.addListener(async () => {
 		return;
 	}
 
-	const tabs = await chrome.tabs.query({
+	const [tab] = await chrome.tabs.query({
 		url: '*://mail.google.com/*',
 		currentWindow: true,
 	});
 
-	if (tabs[0]) chrome.tabs.update(tabs[0].id, { active: true });
+	if (tab) chrome.tabs.update(tab.id, { active: true });
 	else open();
 });
 
