@@ -5,7 +5,8 @@
 	"repository": "valtlai/gmail-button",
 	"scripts": {
 		"test": "eslint . && prettier --check .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"prepare": "npx simple-git-hooks"
 	},
 	"devDependencies": {
 		"eslint": "^8.1.0",
