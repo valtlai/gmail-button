@@ -9,7 +9,7 @@
 		"prepare": "npx simple-git-hooks"
 	},
 	"devDependencies": {
-		"eslint": "^8.1.0",
+		"eslint": "^8.2.0",
 		"lint-staged": "^11.2.6",
 		"prettier": "^2.4.1",
 		"simple-git-hooks": "^2.7.0"
