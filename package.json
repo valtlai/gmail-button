@@ -10,7 +10,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^8.2.0",
-		"lint-staged": "^11.2.6",
+		"lint-staged": "^12.0.3",
 		"prettier": "^2.4.1",
 		"simple-git-hooks": "^2.7.0"
 	},
@@ -18,13 +18,13 @@
 		"root": true,
 		"extends": "eslint:recommended",
 		"reportUnusedDisableDirectives": true,
-		"env": {
-			"es2021": true,
-			"webextensions": true
-		},
 		"parserOptions": {
 			"ecmaVersion": "latest",
 			"sourceType": "module"
+		},
+		"env": {
+			"es2021": true,
+			"webextensions": true
 		}
 	},
 	"prettier": {
