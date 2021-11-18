@@ -26,7 +26,7 @@ chrome.action.onClicked.addListener(async () => {
 /** Initialization **/
 
 chrome.runtime.onInstalled.addListener(() => {
-	// TODO: Convert to a promise
+	// TODO: Convert to a promise when supported
 	chrome.runtime.getPlatformInfo(({ os }) => {
 		// TODO: Fix: `chrome.i18n.getMessage()` is unavailable
 		const menuTitle = chrome.i18n
@@ -56,8 +56,6 @@ chrome.contextMenus.onClicked.addListener(async ({ checked }) => {
 
 	chrome.contextMenus.update(MENU_ID, { checked: false, enabled: false });
 
-	// TODO: update `minimum_chrome_version` and the changelog
-	// when this starts working in stable Chrome
 	const granted = await chrome.permissions.request(permission);
 	chrome.contextMenus.update(MENU_ID, { checked: granted, enabled: true });
 	saveOption(granted);
