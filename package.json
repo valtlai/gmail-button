@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"license": "MIT",
+	"license": "ISC",
 	"author": "Valtteri Laitinen <dev@valtlai.fi>",
 	"repository": "valtlai/gmail-button",
 	"scripts": {
