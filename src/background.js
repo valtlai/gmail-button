@@ -25,20 +25,19 @@ chrome.action.onClicked.addListener(async () => {
 
 /** Initialization **/
 
-chrome.runtime.onInstalled.addListener(() => {
-	// TODO: Convert to a promise when supported
-	chrome.runtime.getPlatformInfo(({ os }) => {
-		// TODO: Fix: `chrome.i18n.getMessage()` is unavailable
-		const menuTitle = chrome.i18n
-			.getMessage('one')
-			.replace(/@(\w)/g, (_, msg) => (os === 'mac' ? msg : msg.toLowerCase()));
+chrome.runtime.onInstalled.addListener(async () => {
+	const { os } = await chrome.runtime.getPlatformInfo();
 
-		chrome.contextMenus.create({
-			id: MENU_ID,
-			type: 'checkbox',
-			title: menuTitle,
-			contexts: ['action'],
-		});
+	// TODO: Fix: `chrome.i18n.getMessage()` is unavailable
+	const menuTitle = chrome.i18n
+		.getMessage('one')
+		.replace(/@(\w)/g, (_, msg) => (os === 'mac' ? msg : msg.toLowerCase()));
+
+	chrome.contextMenus.create({
+		id: MENU_ID,
+		type: 'checkbox',
+		title: menuTitle,
+		contexts: ['action'],
 	});
 });
 
