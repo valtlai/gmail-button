@@ -28,7 +28,6 @@ chrome.action.onClicked.addListener(async () => {
 chrome.runtime.onInstalled.addListener(async () => {
 	const { os } = await chrome.runtime.getPlatformInfo();
 
-	// TODO: Fix: `chrome.i18n.getMessage()` is unavailable
 	const menuTitle = chrome.i18n
 		.getMessage('one')
 		.replace(/@(\w)/g, (_, msg) => (os === 'mac' ? msg : msg.toLowerCase()));
