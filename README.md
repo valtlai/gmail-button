@@ -10,8 +10,8 @@ Install it from [Chrome Web Store][webstore]!
 
 You can help by translating the extension into a language you know:
 
-1. Create a subdirectory under `src/_locales` and name it
-   by the [code of the target language][lang-codes] (like `se` for Swedish).
+1. Create a subdirectory under `src/_locales` and name it by the
+   [code of the target language][lang-codes] (like `se` for Swedish).
 2. Copy the English `messages.json` there and translate the `message` strings.
 3. Open a pull request with the changes.
 

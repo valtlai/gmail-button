@@ -1,0 +1,11 @@
+{
+	"fmt": {
+		"files": {
+			"exclude": ["CHANGELOG.md"]
+		},
+		"options": {
+			"useTabs": true,
+			"singleQuote": true
+		}
+	}
+}
