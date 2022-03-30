@@ -4,7 +4,6 @@
 	"name": "__MSG_name__",
 	"version": "3.0.0",
 	"description": "__MSG_desc__",
-	"homepage_url": "https://github.com/valtlai/gmail-button",
 	"default_locale": "en",
 	"icons": { "128": "icon.png" },
 	"permissions": ["contextMenus", "storage"],
