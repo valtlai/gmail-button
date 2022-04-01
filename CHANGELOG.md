@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0 (unreleased)
+## [3.0.0] (2022-04-01)
 - BREAKING: Upgraded to manifest v3
 - BREAKING: Required Chrome 100 or greater
 
@@ -34,3 +34,5 @@
 
 ## 1.0.0 (2016-12-13)
 - Initial release
+
+[3.0.0]: https://github.com/valtlai/gmail-button/releases/tag/v3.0.0
