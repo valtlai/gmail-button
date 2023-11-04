@@ -1,11 +1,7 @@
 {
 	"fmt": {
-		"files": {
-			"exclude": ["CHANGELOG.md"]
-		},
-		"options": {
-			"useTabs": true,
-			"singleQuote": true
-		}
+		"proseWrap": "preserve",
+		"singleQuote": true,
+		"useTabs": true
 	}
 }
