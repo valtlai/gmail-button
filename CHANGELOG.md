@@ -2,10 +2,12 @@
 
 This project uses [semantic versioning](https://semver.org/).
 
-## [v3.0.0] (2022-04-01)
+## v3.0.0 (2022-04-01)
 
 - BREAKING: Upgraded to manifest v3
 - BREAKING: Required Chrome 100 or greater
+
+[`v3.0.0`](https://github.com/valtlai/gmail-button/tree/v3.0.0)
 
 ## v2.0.0 (2019-06-23)
 
@@ -44,5 +46,3 @@ This project uses [semantic versioning](https://semver.org/).
 ## v1.0.0 (2016-12-13)
 
 - Initial release
-
-[v3.0.0]: https://github.com/valtlai/gmail-button/tree/v3.0.0
