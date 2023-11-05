@@ -45,4 +45,4 @@ This project uses [semantic versioning](https://semver.org/).
 
 - Initial release
 
-[v3.0.0]: https://github.com/valtlai/gmail-button/releases/tag/v3.0.0
+[v3.0.0]: https://github.com/valtlai/gmail-button/tree/v3.0.0
