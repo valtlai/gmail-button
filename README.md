@@ -12,7 +12,7 @@ You can help by translating the extension into a language you know:
 
 1. Create a subdirectory under `source/_locales`
    and name it after the [locale code][locales] of the target language
-   (like `se` for Swedish).
+   (like `sv` for Swedish).
 2. Copy the English `messages.json` there and translate the `message` strings.
 3. Open a pull request with the changes.
 
