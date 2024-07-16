@@ -3,5 +3,9 @@
 		"proseWrap": "preserve",
 		"singleQuote": true,
 		"useTabs": true
+	},
+	"lock": false,
+	"tasks": {
+		"cache": "deno cache source/background.js"
 	}
 }

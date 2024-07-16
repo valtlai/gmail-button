@@ -1,3 +1,6 @@
+// @ts-self-types='npm:chrome-types'
+// @ts-check
+
 const tabsPermission = { permissions: ['tabs'] };
 const menuItemId = 'oneTabOnly';
 
@@ -19,7 +22,7 @@ chrome.action.onClicked.addListener(async () => {
 		currentWindow: true,
 	});
 
-	if (existingTab) {
+	if (existingTab?.id) {
 		chrome.tabs.update(existingTab.id, { active: true });
 	} else {
 		openNewTab();
