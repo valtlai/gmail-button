@@ -6,7 +6,7 @@
 	"description": "__MSG_desc__",
 	"default_locale": "en",
 	"icons": { "128": "icon.png" },
-	"permissions": ["contextMenus", "storage"],
+	"permissions": ["contextMenus"],
 	"optional_permissions": ["tabs"],
 	"background": {
 		"service_worker": "background.js",

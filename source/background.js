@@ -1,15 +1,15 @@
-const OPT_KEY = 'one';
+const tabsPermission = { permissions: ['tabs'] };
 const MENU_ID = 'one';
 
 /** Opening tab **/
 
 chrome.action.onClicked.addListener(async () => {
-	const { one } = await chrome.storage.local.get([OPT_KEY]);
+	const oneTabOnly = await chrome.permissions.contains(tabsPermission);
 
 	const open = () =>
 		chrome.tabs.create({ url: 'https://mail.google.com/mail/' });
 
-	if (!one) {
+	if (!oneTabOnly) {
 		open();
 		return;
 	}
@@ -43,18 +43,13 @@ chrome.runtime.onInstalled.addListener(async () => {
 /** Option & permission **/
 
 chrome.contextMenus.onClicked.addListener(async ({ checked }) => {
-	const permission = { permissions: ['tabs'] };
-	const saveOption = (on) => chrome.storage.local.set({ [OPT_KEY]: on });
-
 	if (!checked) {
-		chrome.permissions.remove(permission);
-		saveOption(false);
+		chrome.permissions.remove(tabsPermission);
 		return;
 	}
 
 	chrome.contextMenus.update(MENU_ID, { checked: false, enabled: false });
 
-	const granted = await chrome.permissions.request(permission);
+	const granted = await chrome.permissions.request(tabsPermission);
 	chrome.contextMenus.update(MENU_ID, { checked: granted, enabled: true });
-	saveOption(granted);
 });
