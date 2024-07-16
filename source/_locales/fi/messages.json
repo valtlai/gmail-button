@@ -1,6 +1,14 @@
 {
-	"name": { "message": "Gmail-painike" },
-	"desc": { "message": "Yksinkertainen kuvake Gmailin avaamiseen" },
-	"open": { "message": "Avaa Gmail" },
-	"one": { "message": "Vain yksi välilehti" }
+	"name": {
+		"message": "Gmail-painike"
+	},
+	"description": {
+		"message": "Yksinkertainen kuvake Gmailin avaamiseen"
+	},
+	"actionTitle": {
+		"message": "Avaa Gmail"
+	},
+	"oneTabOnly": {
+		"message": "Vain yksi välilehti"
+	}
 }

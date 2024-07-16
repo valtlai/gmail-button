@@ -3,7 +3,7 @@
 	"minimum_chrome_version": "100",
 	"name": "__MSG_name__",
 	"version": "3.0.0",
-	"description": "__MSG_desc__",
+	"description": "__MSG_description__",
 	"default_locale": "en",
 	"icons": { "128": "icon.png" },
 	"permissions": ["contextMenus"],
@@ -14,6 +14,6 @@
 	},
 	"action": {
 		"default_icon": "icon.png",
-		"default_title": "__MSG_open__"
+		"default_title": "__MSG_actionTitle__"
 	}
 }

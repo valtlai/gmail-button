@@ -1,6 +1,14 @@
 {
-	"name": { "message": "Gmail Button" },
-	"desc": { "message": "A simple toolbar icon to open Gmail" },
-	"open": { "message": "Open Gmail" },
-	"one": { "message": "Single tab only" }
+	"name": {
+		"message": "Gmail Button"
+	},
+	"description": {
+		"message": "A simple toolbar icon to open Gmail"
+	},
+	"actionTitle": {
+		"message": "Open Gmail"
+	},
+	"oneTabOnly": {
+		"message": "Single tab only"
+	}
 }

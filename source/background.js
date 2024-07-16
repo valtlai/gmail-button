@@ -1,49 +1,58 @@
 const tabsPermission = { permissions: ['tabs'] };
-const MENU_ID = 'one';
+const menuItemId = 'oneTabOnly';
 
-/** Opening tab **/
-
+// Extension clicked on the browser toolbar:
+// Open or activate a Gmail tab
 chrome.action.onClicked.addListener(async () => {
 	const oneTabOnly = await chrome.permissions.contains(tabsPermission);
 
-	const open = () =>
+	const openNewTab = () =>
 		chrome.tabs.create({ url: 'https://mail.google.com/mail/' });
 
 	if (!oneTabOnly) {
-		open();
+		openNewTab();
 		return;
 	}
 
-	const [tab] = await chrome.tabs.query({
+	const [existingTab] = await chrome.tabs.query({
 		url: '*://mail.google.com/*',
 		currentWindow: true,
 	});
 
-	if (tab) chrome.tabs.update(tab.id, { active: true });
-	else open();
+	if (existingTab) {
+		chrome.tabs.update(existingTab.id, { active: true });
+	} else {
+		openNewTab();
+	}
 });
 
-/** Initialization **/
-
+// Extension installed:
+// Create a context menu item for the option to activate an existing Gmail tab
 chrome.runtime.onInstalled.addListener(() => {
 	chrome.contextMenus.create({
-		id: MENU_ID,
+		id: menuItemId,
 		type: 'checkbox',
-		title: chrome.i18n.getMessage('one'),
+		title: chrome.i18n.getMessage('oneTabOnly'),
 		contexts: ['action'],
 	});
 });
 
-/** Option & permission **/
-
+// Context menu item clicked:
+// Request or remove the permission to query tabs
 chrome.contextMenus.onClicked.addListener(async ({ checked }) => {
 	if (!checked) {
 		chrome.permissions.remove(tabsPermission);
 		return;
 	}
 
-	chrome.contextMenus.update(MENU_ID, { checked: false, enabled: false });
+	chrome.contextMenus.update(menuItemId, {
+		checked: false, // keep unchecked while a permission prompt is present
+		enabled: false, // avoid duplicate permission prompts
+	});
 
 	const granted = await chrome.permissions.request(tabsPermission);
-	chrome.contextMenus.update(MENU_ID, { checked: granted, enabled: true });
+	chrome.contextMenus.update(menuItemId, {
+		checked: granted,
+		enabled: true,
+	});
 });
