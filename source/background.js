@@ -25,17 +25,11 @@ chrome.action.onClicked.addListener(async () => {
 
 /** Initialization **/
 
-chrome.runtime.onInstalled.addListener(async () => {
-	const { os } = await chrome.runtime.getPlatformInfo();
-
-	const menuTitle = chrome.i18n
-		.getMessage('one')
-		.replace(/@(\w)/g, (_, msg) => (os === 'mac' ? msg : msg.toLowerCase()));
-
+chrome.runtime.onInstalled.addListener(() => {
 	chrome.contextMenus.create({
 		id: MENU_ID,
 		type: 'checkbox',
-		title: menuTitle,
+		title: chrome.i18n.getMessage('one'),
 		contexts: ['action'],
 	});
 });
