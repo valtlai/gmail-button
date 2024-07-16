@@ -2,6 +2,13 @@
 
 This project uses [semantic versioning](https://semver.org/).
 
+## v3.1.0 (2024-07-16)
+
+- Removed the `storage` permission
+- Changed the option to always use sentence case (_Single tab only_)
+
+[`v3.0.0...v3.1.0`](https://github.com/valtlai/gmail-button/compare/v3.0.0...v3.1.0)
+
 ## v3.0.0 (2022-04-01)
 
 - BREAKING: Upgraded to manifest v3
@@ -12,10 +19,10 @@ This project uses [semantic versioning](https://semver.org/).
 ## v2.0.0 (2019-06-23)
 
 - Made the `tabs` permission (labeled as _browsing history_) optional
-  - Replaced the _Allow multiple tabs_ option with _Single tab only_,
-    disabled by default
-  - The permission will be requested after the option is checked
-    and removed after it’s unchecked
+	- Replaced the _Allow multiple tabs_ option with _Single tab only_,
+	  disabled by default
+	- The permission will be requested after the option is checked
+	  and removed after it’s unchecked
 - Changed to use title case on Mac (_Single Tab Only_)
 
 ## v1.2.1 (2019-04-15)
